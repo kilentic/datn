@@ -10,6 +10,13 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= render 'layouts/header' %>
+    <div class="wrapper">
+      <%= render 'layouts/side_nav' %>
+      <div id="content">
+        <%= yield %>
+      </div>
+    </div>
+    <%= render 'modals/login_modal' %>
   </body>
 </html>
