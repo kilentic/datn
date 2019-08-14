@@ -10,5 +10,13 @@
   </head>
 
   <body>
+    <%= render 'layouts/users/header' %>
+    <div class="wrapper">
+      <%= render 'layouts/users/side_nav' %>
+      <div id="content">
+        <%= yield %>
+      </div>
+    </div>
+    <%= render 'users/modals/login_modal' %>
   </body>
 </html>
