@@ -3,7 +3,7 @@ RSpec.describe Users::HomePagesController, type: :controller do
     context "when non-logged-in user visit" do 
       it "should response with status 200" do 
         get :index 
-        expect(response).to have_http_status(:success)
+        expect(response).to be_successful
       end
     end
   end
