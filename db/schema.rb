@@ -10,9 +10,40 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2019_08_16_070240) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "admins", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "visitors", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "password_digest"
+    t.integer "provider"
+    t.integer "uid"
+    t.string "remember_digest"
+    t.string "activation_digest"
+    t.boolean "activated"
+    t.datetime "activated_at"
+    t.datetime "reset_sent_at"
+    t.integer "refer_id"
+    t.string "refer_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_visitors_on_email", unique: true
+    t.index ["provider", "uid"], name: "index_visitors_on_provider_and_uid", unique: true
+    t.index ["provider"], name: "index_visitors_on_provider"
+    t.index ["uid"], name: "index_visitors_on_uid"
+  end
 
 end

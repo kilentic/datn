@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "2.6.3"
 
+gem "bcrypt"
 gem "bootsnap", ">= 1.1.0", require: false
 gem "bootstrap"
 gem "dotenv-rails"
@@ -29,7 +30,9 @@ group :development do
 end
 
 group :test do 
-  gem "rspec-rails"
   gem "capybara"
+  gem "factory_bot_rails"
+  gem "rspec-rails"
+  gem "shoulda-matchers"
 end
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
