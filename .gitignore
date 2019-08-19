@@ -28,3 +28,6 @@
 
 #Ignore enviroment file 
 .env
+
+#Ignore ssl key
+/config/ssl/*
