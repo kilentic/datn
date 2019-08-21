@@ -3,11 +3,18 @@ function sleep(ms) {
 }
 
 $(document).ready(function() {
+    $('#login-button').on('click', function() {
+      $.ajax({
+        type: 'GET',
+        dataType: 'script',
+        url: Routes.new_user_controllers_authentications_sessions_path()
+      });
+    });
     FB.init({
-      appId            : '<%= ENV["FACEBOOK_APP_ID"] %>',
-      autoLogAppEvents : true,
-      xfbml            : true,
-      version          : 'v4.0'
+        appId: '<%= ENV["FACEBOOK_APP_ID"] %>',
+        autoLogAppEvents: true,
+        xfbml: true,
+        version: 'v4.0'
     });
     $(".carousel").carousel({
         interval: 6000,
