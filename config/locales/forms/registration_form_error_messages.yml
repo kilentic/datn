@@ -1,0 +1,5 @@
+en: 
+  errors:
+    provider_uid_scope_unique?: "and uid has been taken"
+    email_case_insensitive_uniqueness?: "has already been taken"
+    same_password?: "does not match"
