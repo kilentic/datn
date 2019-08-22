@@ -1,0 +1,6 @@
+$('span.d-block').remove()
+<% error_messages.each do |attr, message| %>
+  <% message.each do |mess| %>
+    $('#<%= error_element_id attr%>').append("<%= j content_tag(:span, attr.to_s.titleize + " " + mess, class: "d-block")%>")
+  <% end %> 
+<% end %>
