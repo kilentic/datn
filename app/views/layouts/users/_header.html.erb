@@ -22,13 +22,16 @@
                 </div>
             </form>
 
-            <!--   <button class="btn btn&#45;dark d&#45;inline&#45;block d&#45;lg&#45;none" id="login&#45;action&#45;toggler" -->
-            <!--       type="button" data&#45;toggle="collapse" data&#45;target="#navbarSupportedContent" -->
-            <!--       aria&#45;controls="navbarSupportedContent" aria&#45;expanded="false" aria&#45;label="Toggle navigation"> -->
-            <!--           <i class="fas fa&#45;align&#45;justify"></i> -->
-            <!-- </button> -->
-            <%= button_tag id: "login-button", class: "btn btn-info d-inline-block" do %>
-              <%= content_tag :span, "Đăng nhập" %>
+            <% if logged_in? %>
+              <button class="btn btn-dark d-inline-block d-lg-none" id="login-action-toggler"
+                  type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <i class="fas fa-align-justify"></i>
+              </button>
+            <% else %>
+              <%= button_tag id: "login-button", class: "btn btn-info d-inline-block" do %>
+                <%= content_tag :span, "Đăng nhập" %>
+              <% end %>
             <% end %>
         </div>
     </nav>
