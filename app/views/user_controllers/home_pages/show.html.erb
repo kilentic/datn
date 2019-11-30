@@ -1,0 +1,47 @@
+<div class="infor-wrapper">
+  <div class="detail-wrapper">
+    <div class="img">
+      <%= image_tag "demo_600x799.webp", class: "product-img" %>
+
+    </div>
+    <div class="order">
+      <h3>SHEIN Váy Xẻ Cổ Cong</h3>
+      <h2 class="price">348.000đ</h2>
+      <%= label_tag 'product', 'Loại' %>
+      <%= select_tag 'product', options_for_select(["Đen", "Trắng"] ), multiple: false, label: "Loại", class: '' %>
+      <br/>
+      <%= label_tag 'count', 'Số lượng' %>
+      <%= number_field_tag 'count' %>
+      <div class="buy-cart">
+        <%= button_tag 'Thêm vào giỏ', type:'button', class:'btn btn-primary' %>
+        <%= button_tag 'Mua ngay', type:'button', class:'btn buy-btn' %>
+      </div>
+
+      <div class="detail">
+        <h3>Chi tiết sản phẩm</h3>
+        <div class="brand">
+          <%= label_tag 'brand', 'Thương hiệu' %>
+          <p  name='brand'>No brand</p>
+        </div>
+        <div class="pattern">
+          <%= label_tag 'pattern', 'Họa tiết' %>
+          <p name='pattern'>Patchwork</p>
+        </div>
+        <div class="origin">
+          <%= label_tag 'origin', 'Xuất xứ' %>
+          <p name='origin'>Việt Nam</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="description">
+    <h3>Mô tả sản phẩm</h3>
+    <p>    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+    tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
+    vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+    no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+  </div>
+
+</div>
+
